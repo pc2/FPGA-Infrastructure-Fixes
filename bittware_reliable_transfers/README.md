@@ -4,7 +4,7 @@
 Data transfers from the FPGA to the host sometimes leave out a couple of pages, leading to corruption of the read data.
 
 ## Technical Details
-The issue occurs seldomly enough no stay unnoticed for several years with a rough estimate of one error per 280 TiB of transferred data. The root cause is unknown but likely to be found in one of the following components:
+The issue occurs seldomly enough to stay unnoticed for several years with a rough estimate of one error per 280 TiB of transferred data. The root cause is unknown but likely to be found in one of the following components:
 * DMA logic in the kernel driver
 * Bittware userspace library (libbitt_s10_pcie_mmd.so)
 * FPGA shell, in particular the PCIe / DMA logic
