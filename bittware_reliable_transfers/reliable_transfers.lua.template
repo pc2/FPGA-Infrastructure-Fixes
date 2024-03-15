@@ -1,0 +1,3 @@
+conflict("520n_reliable_transfers")
+
+prepend_path{"LD_LIBRARY_PATH", "/opt/software/FPGA/patches/bittware_reliable_transfers/VERSION", priority=100}

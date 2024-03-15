@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ "$1" != "/sys/class/aclpci_bitt_s10_pcie" -o -z "$HIDEACL" ]; then
+    exec /usr/bin/ls "$@"
+fi
+
+result=$(/usr/bin/ls "$@")
+retval=$?
+
+echo "$result" | sed "/aclbitt_s10_pcie${HIDEACL}/d"
+
+exit $retval
